@@ -28,13 +28,13 @@ jobs:
 
       - name: Start API server
         run: |
-          nohup python main.py &
+          nohup python app.py &
 
       - name: Wait for API to be ready
         run: sleep 5
 
       - name: Run API tests
-        run: pytest tests/
+        run: pytest testApp.py
 
       - name: Stop API server
-        run: pkill -f main.py
+        run: pkill -f app.py
