@@ -1,10 +1,10 @@
-from flask import Flask, jsonfiy
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route('/hello',method=['GET'])
+@app.route('/hello',methods=['GET'])
 def hello():
-    return jsonfiy({"message": "hello world!"})
+    return jsonify({"message": "hello world!"})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=8080)
